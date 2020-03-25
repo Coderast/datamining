@@ -40,42 +40,42 @@
 
 В ходе анализа данных для их подготовки поля были выделены в следующие группы:
 #####  Оставить как есть:
-hotel - 0/1
-is_canceled - 0/1
-lead_time - int
-arrival_date_year - int
-arrival_date_week_number - int
-arrival_date_day_of_month - int
-adults - int
-children - int - 0.003% пропусков заменим на mean
-babies - int
-stays_in_weekend_nights - int
-stays_in_week_nights - int
-is_repeated_guest - 0/1
-previous_cancellations - int
-previous_bookings_not_canceled - int
-booking_changes - int
-days_in_waiting_list - int
-adr - float
-required_car_parking_spaces - int
-total_of_special_requests - int
+* hotel - 0/1
+* is_canceled - 0/1
+* lead_time - int
+* arrival_date_year - int
+* arrival_date_week_number - int
+* arrival_date_day_of_month - int
+* adults - int
+* children - int - 0.003% пропусков заменим на mean
+* babies - int
+* stays_in_weekend_nights - int
+* stays_in_week_nights - int
+* is_repeated_guest - 0/1
+* previous_cancellations - int
+* previous_bookings_not_canceled - int
+* booking_changes - int
+* days_in_waiting_list - int
+* adr - float
+* required_car_parking_spaces - int
+* total_of_special_requests - int
 ##### Заменить на число:
-arrival_date_mounth - сохраняем порядок месяцев
-meal - есть чёткая линейная градация от худшего к лучшему
-deposit_type - аналогично с meal
+* arrival_date_mounth - сохраняем порядок месяцев
+* meal - есть чёткая линейная градация от худшего к лучшему
+* deposit_type - аналогично с meal
 ##### Заменить на категорию (dummy кодирование):
-country - 0.4% пропусков - заменим на mean
-market_segment
-distribution_channel
-reserved_room_type (мы ничего не знаем о порядке типов комнат)
-assigned_room_type (мы ничего не знаем о порядке типов комнат)
-customer_type
-reservation_status
+* country - 0.4% пропусков - заменим на mean
+* market_segment
+* distribution_channel
+* reserved_room_type (мы ничего не знаем о порядке типов комнат)
+* assigned_room_type (мы ничего не знаем о порядке типов комнат)
+* customer_type
+* reservation_status
 ##### Удалить:
-agent - 333 unique на 103 050 - более 14% пропусков
-company - более 94% пропусков
+* agent - 333 unique на 103 050 - более 14% пропусков
+* company - более 94% пропусков
 ##### Другие преобразования:
-reservation_status_date - записано в виде строки в формате YYYY-MM-DD, преобразуем в три int поля:
-    reservation_status_date_year
-    reservation_status_date_month
-    reservation_status_date_day_of_month
+* reservation_status_date - записано в виде строки в формате YYYY-MM-DD, преобразуем в три int поля:
+    * reservation_status_date_year
+    * reservation_status_date_month
+    * reservation_status_date_day_of_month
